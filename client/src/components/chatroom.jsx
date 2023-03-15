@@ -13,6 +13,7 @@ const Chatroom = () => {
   const username = user.name;
     
   
+
   const handleclick = (e) =>{
     e.preventDefault();
     setSelected(e.target.value)
@@ -98,11 +99,6 @@ const Chatroom = () => {
                 C
               </div>
               <div className="ml-2 text-sm font-semibold">Culture and Diversity</div>
-              <div
-                className="flex items-center justify-center ml-auto text-xs text-white bg-red-500 h-4 w-4 rounded leading-none"
-              >
-                2
-              </div> {/*notification styling*/}
             </button>
             <button
               onClick={handleclick}
@@ -131,10 +127,9 @@ const Chatroom = () => {
           </div>
         </div>
       </div>
-
       {/*chatroom area*/}
       <ChatArea socket={socket} username={username} room ={selected}/>
-    </div>
+      </div>
   </div>
   )
 }
